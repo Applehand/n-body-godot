@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcgxfe8fp7ljb"]
+
+[ext_resource type="Script" path="res://Scripts/Earth.gd" id="1_8cxf4"]
+[ext_resource type="PackedScene" uid="uid://d4k8s5mmmqfxf" path="res://Scenes/celestial_body.tscn" id="1_g576x"]
+
+[node name="Earth" instance=ExtResource("1_g576x")]
+script = ExtResource("1_8cxf4")

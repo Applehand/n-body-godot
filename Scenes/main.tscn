@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://diy7nxiecbksd"]
+
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_puqp8"]
+[ext_resource type="PackedScene" uid="uid://dvt8ydohewgpc" path="res://Scenes/sun.tscn" id="3_kkf82"]
+[ext_resource type="PackedScene" uid="uid://bcgxfe8fp7ljb" path="res://Scenes/earth.tscn" id="3_neogq"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_puqp8")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Earth" parent="." instance=ExtResource("3_neogq")]
+
+[node name="Sun" parent="." instance=ExtResource("3_kkf82")]
+
+[connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
