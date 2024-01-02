@@ -4,4 +4,4 @@ const AU: float = (149.6e6 * 1000)     # Astronomical Unit - 149.6 million km, i
 const G: float = 6.67428e-11     # The gravitational constant G
 const SCALE: float = 250 / AU
 
-var timestep: int = 24*3600  # One day
+var timestep: int = 12*3600  # One day

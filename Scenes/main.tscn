@@ -7,10 +7,10 @@
 [node name="main" type="Node2D"]
 script = ExtResource("1_puqp8")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="Earth" parent="." instance=ExtResource("3_neogq")]
 
 [node name="Sun" parent="." instance=ExtResource("3_kkf82")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
 
 [connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
