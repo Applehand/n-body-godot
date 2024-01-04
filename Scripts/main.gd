@@ -1,17 +1,15 @@
 extends Node2D
 
-var celestial_bodies: Array[CelestialBody]
-var total_forces: Dictionary
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+var celestial_bodies: Array[CelestialBody]
+
+
 func _physics_process(_delta) -> void:
 	update_celestial_body_positions(celestial_bodies)
 
-func _on_child_entered_tree(node) -> void:
-	if node is CelestialBody:
-		celestial_bodies.append(node)
 
 func update_celestial_body_positions(bodies: Array[CelestialBody]) -> void:
+	var total_forces: Dictionary
 	for body in bodies:
 		var net_force: Vector2 = Vector2.ZERO
 		for other_body in bodies:
@@ -35,8 +33,7 @@ func update_celestial_body_positions(bodies: Array[CelestialBody]) -> void:
 		body.position.x = body.pos_x * Universe.SCALE
 		body.position.y = body.pos_y * Universe.SCALE
 
-		print('Body:', body.id)
-		print('Velocity:', body.vel_x, body.vel_y)
-		print('Position:', body.pos_x, body.pos_y)
-		print('Force applied:', applied_force)
-		print("======")
+
+func _on_child_entered_tree(node):
+	if node is CelestialBody:
+		celestial_bodies.append(node)

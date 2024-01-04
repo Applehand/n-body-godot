@@ -7,6 +7,6 @@
 [node name="Sun" instance=ExtResource("1_vrps4")]
 script = ExtResource("1_b01ll")
 
-[node name="Sprite2D" parent="." index="1"]
+[node name="Sprite2D" parent="." index="0"]
 modulate = Color(1, 1, 0.101961, 1)
 texture = ExtResource("3_r5qai")

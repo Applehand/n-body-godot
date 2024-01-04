@@ -1,7 +1,6 @@
 extends Node2D
 class_name CelestialBody
 
-@onready var label = $Label
 
 var id: String = ""
 var mass: float = 0.0
@@ -9,6 +8,7 @@ var vel_x: float = 0.0
 var vel_y: float = 0.0
 var pos_x: float = 0.0
 var pos_y: float = 0.0
+
 
 func get_attraction_force(other_body: CelestialBody) -> Vector2:
 	if self.id == other_body.id:
@@ -27,7 +27,7 @@ func get_attraction_force(other_body: CelestialBody) -> Vector2:
 	var force: float = Universe.G * self.mass * other_body.mass / (distance**2)
 
 	# Compute the direction of the force.
-	var theta = atan2(distance_y, distance_x)
+	var theta: float = atan2(distance_y, distance_x)
 	var force_x: float = cos(theta) * force
 	var force_y: float = sin(theta) * force
 	var attraction_force := Vector2(force_x, force_y)

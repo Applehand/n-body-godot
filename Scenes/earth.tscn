@@ -7,6 +7,6 @@
 [node name="Earth" instance=ExtResource("1_g576x")]
 script = ExtResource("1_8cxf4")
 
-[node name="Sprite2D" parent="." index="1"]
+[node name="Sprite2D" parent="." index="0"]
 modulate = Color(0.337255, 1, 0.247059, 1)
 texture = ExtResource("3_8v4qu")
